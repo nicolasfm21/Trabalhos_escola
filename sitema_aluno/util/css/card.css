@@ -1,0 +1,312 @@
+/* From Uiverse.io by kennyotsu */ 
+/*works janky on mobile :<*/
+
+form {
+  
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  position: relative;
+  width: 60vw;
+  height: 50vh;
+  transition: 200ms;
+
+
+}
+.subtitle {
+  transform: translateY(100%);
+  color: rgb(134, 110, 221);
+  text-align: center;
+  width: 100%;
+
+}
+
+#card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  border-radius: 20px;
+  transition: 700ms;
+
+  background: rgb(0,153,255);
+  background: linear-gradient(25deg, rgba(0,153,255,1) 0%, rgba(113,0,255,1) 100%);
+
+}
+
+.title{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5%;
+      gap: 50px 10vw;
+      
+}
+
+.tracker:hover ~ #card .title {
+  opacity: 1;
+}
+
+
+.tracker:hover ~ #card #prompt {
+  opacity: 1;
+}
+
+.tracker:hover ~ #card {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.container:hover #card::before {
+  transition: 200ms;
+  content: '';
+  opacity: 80%;
+}
+
+.canvas {
+  perspective: 800px;
+  inset: 0;
+  z-index: 100;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "tr-1 tr-2 tr-3 tr-4 tr-5"
+    "tr-6 tr-7 tr-8 tr-9 tr-10"
+    "tr-11 tr-12 tr-13 tr-14 tr-15"
+    "tr-16 tr-17 tr-18 tr-19 tr-20"
+    "tr-21 tr-22 tr-23 tr-24 tr-25";
+}
+
+#card::before {
+  content: '';
+  background: rgb(0,220,255);
+  background: linear-gradient(54deg, rgba(0,220,255,1) 0%, rgba(113,0,255,1) 100%);
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+
+  /* From Uiverse.io by mrhyddenn */ 
+  .form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  
+
+  .form__field {
+    font-family: inherit;
+    width: 170%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 30px; /*------------------------------------------------------------------------------------------------------------------------------*/
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+   
+
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+
+
+.alterar{
+    margin: 20px ;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  z-index: 100;
+/* From Uiverse.io by UtariD86 */ 
+#atualizar {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #00a600;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #00a600;
+}
+
+#atualizar,
+#atualizar span {
+  transition: 200ms;
+}
+
+#atualizar .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+#atualizar .icon {
+  position: absolute;
+  border-left: 1px solid #007300;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#atualizar svg {
+  width: 15px;
+  fill: #eee;
+}
+
+#atualizar:hover {
+  background: #00a600;
+}
+
+#atualizar:active {
+  background: #00cc00;
+}
+
+#atualizar:hover .text {
+  color: transparent;
+}
+
+#atualizar:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+#atualizar:focus {
+  outline: none;
+}
+
+#atualizar:active .icon svg {
+  transform: scale(0.8);
+}
+
+.buttonSpan {
+  color: white;
+  margin: 150px;
+  font-size: 30px;
+}
+
+  
+/* outro delet*//* From Uiverse.io by cssbuttons-io */ 
+#deletar {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #e62222;
+ }
+ 
+ #deletar, #deletar span {
+  transition: 200ms;
+ }
+ 
+ #deletar .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+ }
+ 
+ #deletar .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ #deletar svg {
+  width: 15px;
+  fill: #eee;
+ }
+ 
+ #deletar:hover {
+  background: #ff3636;
+ }
+ 
+ #deletar:hover .text {
+  color: transparent;
+ }
+ 
+ #deletar:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+ }
+ 
+ #deletar:focus {
+  outline: none;
+ }
+ 
+ #deletar:active .icon svg {
+  transform: scale(0.8);
+ }
+
+}

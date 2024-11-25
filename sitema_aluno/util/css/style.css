@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.title{
+    font-family: verdana;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.section{
+    display: none;
+
+}
+.active{
+    display: block !important;
+}
+
+.container{
+
+margin-left: 80px;
+width: 100px;
+}
